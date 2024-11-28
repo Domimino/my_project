@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Camps{% endblock %}
+
+{% block body %}
+    <h1>Available Camps</h1>
+    <ul>
+        {% for camp in camps %}
+            <li>
+                <h2>{{ camp.name }}</h2>
+                <p>From {{ camp.startDate|date('F j, Y') }} to {{ camp.endDate|date('F j, Y') }}</p>
+                <p>{{ camp.description }}</p>
+            </li>
+        {% else %}
+            <p>No camps available at the moment.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Interest Groups{% endblock %}
+
+{% block body %}
+    <h1>Interest Groups</h1>
+    <ul>
+        {% for group in groups %}
+            <li>
+                <h2>{{ group.name }}</h2>
+                <p>Age Group: {{ group.ageGroup }}</p>
+                <p>Schedule: {{ group.schedule }}</p>
+                <p>{{ group.description }}</p>
+            </li>
+        {% else %}
+            <p>No interest groups available at the moment.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

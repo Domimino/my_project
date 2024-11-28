@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Event{% endblock %}
+
+{% block body %}
+    <h1>Create New Event</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.name, { label: 'Event Name' }) }}
+        {{ form_row(form.date, { label: 'Event Date' }) }}
+        {{ form_row(form.description, { label: 'Event Description' }) }}
+        <button class="btn btn-success">Create</button>
+    {{ form_end(form) }}
+{% endblock %}

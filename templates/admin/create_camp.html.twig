@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Camp{% endblock %}
+
+{% block body %}
+    <h1>Create New Camp</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.name, { label: 'Camp Name' }) }}
+        {{ form_row(form.startDate, { label: 'Start Date' }) }}
+        {{ form_row(form.endDate, { label: 'End Date' }) }}
+        {{ form_row(form.description, { label: 'Description' }) }}
+        <button class="btn btn-success">Create</button>
+    {{ form_end(form) }}
+{% endblock %}

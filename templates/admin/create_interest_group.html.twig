@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Interest Group{% endblock %}
+
+{% block body %}
+    <h1>Create New Interest Group</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.name, { label: 'Group Name' }) }}
+        {{ form_row(form.ageGroup, { label: 'Age Group' }) }}
+        {{ form_row(form.schedule, { label: 'Schedule' }) }}
+        {{ form_row(form.description, { label: 'Description' }) }}
+        <button class="btn btn-success">Create</button>
+    {{ form_end(form) }}
+{% endblock %}
